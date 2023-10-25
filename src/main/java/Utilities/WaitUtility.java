@@ -41,5 +41,47 @@ public class WaitUtility {
 		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(target));
 	
 	}
+	public static void waitForelementSelectionStateToBe(WebDriver driver,WebElement target) {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(EXPLICIT_WAIT));
+
+		wait.until(ExpectedConditions.elementSelectionStateToBe(target, false));
+	
+	}
+	public static void waitForinvisibilityOf(WebDriver driver,WebElement target) {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(EXPLICIT_WAIT));
+
+		wait.until(ExpectedConditions.invisibilityOf(target));
+	
+	}
+	public static void waitFortextToBePresentInElementValue(WebDriver driver,WebElement target,String text) {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(EXPLICIT_WAIT));
+
+		wait.until(ExpectedConditions.textToBePresentInElementValue(target, text));
+	
+	}
+	public static void waitForurlToBe(WebDriver driver,WebElement target,String text) {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(EXPLICIT_WAIT));
+
+		wait.until(ExpectedConditions.urlToBe(text));
+	
+	}
+	public static void waitForurlToBe(WebDriver driver,WebElement target,int numberofwindows) {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(EXPLICIT_WAIT));
+
+		wait.until(ExpectedConditions.numberOfWindowsToBe(numberofwindows));
+	
+	}
+	public static void waitFortitleContains(WebDriver driver,WebElement target,String text) {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(EXPLICIT_WAIT));
+
+		wait.until(ExpectedConditions.titleContains(text));
+	
+	}
+	public static void waitForstalenessOf(WebDriver driver,WebElement target) {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(EXPLICIT_WAIT));
+
+		wait.until(ExpectedConditions.stalenessOf(target));
+	
+	}
 
 }

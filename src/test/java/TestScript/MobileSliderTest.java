@@ -3,9 +3,6 @@ package TestScript;
 import static org.testng.Assert.assertTrue;
 
 import org.testng.annotations.Test;
-
-import com.obsqura.martSuperMarket.Base;
-
 import Utilities.ExcelUtility;
 import Utilities.GeneralUtility;
 import pages.LoginPage;
