@@ -9,6 +9,7 @@ import org.testng.annotations.Test;
 import com.obsqura.martSuperMarket.Base;
 
 import Utilities.ExcelUtility;
+import Utilities.GeneralUtility;
 import pages.CategoryPage;
 import pages.LoginPage;
 
@@ -40,7 +41,7 @@ public class CategoryTest extends Base{
 		String inputValidPassword = ExcelUtility.getString(0,1,"LoginPage");
 		String category =ExcelUtility.getString(4,1,"CategoryPage");
 		String expectedAlertMessage =ExcelUtility.getString(5,1,"CategoryPage");
-		
+		String filepath = GeneralUtility.IMAGEFILE;
 		CategoryPage categoryPage = new CategoryPage(driver);
 		LoginPage loginPage = new LoginPage(driver);
 		
@@ -49,11 +50,11 @@ public class CategoryTest extends Base{
 		clickOnNewButton().
 		enterCategoryOnCategoryEnterField(category).
 		clickOnSelectGroupButton();
-		categoryPage.uploadImageFile();
+		categoryPage.uploadImageFile(filepath);
 		//categoryPage.clickOnTopRadioButton().categoryPage.clickonLeftRadioButton();
 		categoryPage.clickOnSaveButton();
 		String actualAlertMessage= categoryPage.issuccsessAlertDiplayed();
-		assertEquals(actualAlertMessage.contains(expectedAlertMessage)," Category not created!");
+		assertTrue(actualAlertMessage.contains(expectedAlertMessage)," Category not created!");
 		
 		
 	}

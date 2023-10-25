@@ -5,7 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import Utilities.ExcelUtility;
+
 import Utilities.PageUtility;
 
 public class AdminUsersPage {
@@ -23,7 +23,7 @@ public WebDriver driver;
 	@FindBy(xpath = "//input[@id='password']") WebElement passwordFiled;
 	@FindBy(xpath = "//select[@id='user_type']")WebElement selectUserTypeButton;
 	@FindBy(xpath = "//button[@name='Create']")WebElement saveButton;
-
+	@FindBy(xpath = "//div[contains(@class,'alert-success')]")WebElement NewUserAddedSuccessAlertBox;
 	
 	
 	public AdminUsersPage clickOnAdminUsersMoreInfolink() {
@@ -44,13 +44,17 @@ public WebDriver driver;
 		return this;
 	}
 	
-	public AdminUsersPage selectUsertype() {
-		String userType= ExcelUtility.getString(2,1,"AdminUserPage");
+	public AdminUsersPage selectUsertype(String userType) {
 		PageUtility.selectDropdownByText(driver, selectUserTypeButton, userType);
 		return this;
 	}
 	public void clickOnSaveButton() {
 		saveButton.click();
 	}
+	 public String issuccsessAlertDiplayed() {
+		   String alertText= NewUserAddedSuccessAlertBox.getText();
+		   return alertText;
+		   
+	   }
 	
 }

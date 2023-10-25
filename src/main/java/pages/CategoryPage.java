@@ -11,7 +11,6 @@ import org.openqa.selenium.support.PageFactory;
 
 import Utilities.WaitUtility;
 import Utilities.FileUploadUtility;
-import Utilities.GeneralUtility;
 import Utilities.PageUtility;
 
 
@@ -95,16 +94,15 @@ public WebDriver driver;
 		  WaitUtility.waitForElementTobeClickable(driver, ShowOnLeftMenuRadioButton);
 		  ShowOnLeftMenuRadioButton.click();
 	  }
-    public void uploadImageFile()
+    public void uploadImageFile(String filepath )
    {
-	String filepath = GeneralUtility.IMAGEFILE;
 	FileUploadUtility.fileUploadUsingSendKeys(chooseFileButton, filepath);
    }
    public void clickOnSaveButton() 
   {
 	PageUtility.javascriptExcecuterForClick(driver, saveFileButton);
 	//WaitUtility.waitForElementTobeClickable(driver, saveFileButton);
-	saveFileButton.click();
+	//saveFileButton.click();
   }
    public String issuccsessAlertDiplayed() {
 	   String alertText= categorySuccessAlertBox.getText();
