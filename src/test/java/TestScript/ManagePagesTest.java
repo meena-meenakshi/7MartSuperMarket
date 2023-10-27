@@ -13,7 +13,7 @@ import pages.LoginPage;
 import pages.ManagePagesPage;
 
 public class ManagePagesTest extends Base{
-	@Test
+	@Test(description="Verify searchlist Functionality On ManagePages Page")
 	public void verifySerachListFuctionality() {
 		String loginAdminUserName = ExcelUtility.getString(0,1,"LoginPage");
 		String loginAdminPassword = ExcelUtility.getString(1,1,"LoginPage");

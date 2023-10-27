@@ -11,7 +11,6 @@ import org.openqa.selenium.WebElement;
 public class FileUploadUtility {
 	public static void fileUploadUsingSendKeys(WebElement element, String filePath)
 	{
-		//String file_Path=  GeneralUtility.IMAGEFILE;
 		element.sendKeys(filePath);
 		
 	}

@@ -13,20 +13,19 @@ import pages.ManageSliderPage;
 
 
 public class ManageSliderTest extends Base{
-@Test
+@Test(description="Verify Add New slider Functionality On Managesliderpage")
 	public void verifyAddNewSliderFunctinality() {
 		
 		String loginAdminUserName = ExcelUtility.getString(0,1,"LoginPage");
 		String loginAdminPassword = ExcelUtility.getString(1,1,"LoginPage");
 		String sliderLink =ExcelUtility.getString(0,1,"ManageSliderPage");
 		String expectedAlertMessage=ExcelUtility.getString(1,1,"ManageSliderPage");
-		String filepath = GeneralUtility.IMAGEFILE;
+		String filepath = GeneralUtility.MANAGESLIDERIMAGEFILE;
 		ManageSliderPage managesliderPage = new ManageSliderPage(driver);
 		LoginPage loginPage = new LoginPage(driver);
 		loginPage.enterUserNameOnUserNameField(loginAdminUserName).enterPasswordOnPasswordField(loginAdminPassword).clickOnSignInButton();
 		managesliderPage.clickOnManageSliderMoreInfoLink().clickOnAddNewSliderButton().uploadImageFile(filepath);
 		managesliderPage.enterSliderLinkOnEnterSliderTextFiled(sliderLink).clickOnSaveButton();
-
 		String actualAlertMessage=managesliderPage.issuccsessAlertDiplayed();
 		assertTrue(actualAlertMessage.contains(expectedAlertMessage)," Slider not created!");
 		

@@ -12,14 +12,11 @@ import pages.ManageLocationPage;
 
 
 public class ManageLocationTest extends Base {
-	@Test
+	@Test(description="Verify edit delivery charge functionality of managelocationpage")
 	
 	public void verifyEditdeliverychargeTextfeildFunctionalityOnManageLocationPage() {
 		String loginAdminUserName = ExcelUtility.getString(0,1,"LoginPage");
 		String loginAdminPassword = ExcelUtility.getString(1,1,"LoginPage");
-		//String state=ExcelUtility.getString(0,1,"ManageLocationPage") ;
-		//String country=ExcelUtility.getString(1,1,"ManageLocationPage") ;
-		//String location=ExcelUtility.getString(2,1,"ManageLocationPage") ;
 		String deliveryCharge = ExcelUtility.getNumeric(3, 1, "ManageLocationPage");
 		String expectedAlertMessage = ExcelUtility.getString(4,1,"ManageLocationPage");
 		ManageLocationPage managelocationPage = new ManageLocationPage(driver);

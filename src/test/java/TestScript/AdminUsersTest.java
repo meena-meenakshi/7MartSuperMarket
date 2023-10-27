@@ -8,14 +8,13 @@ import pages.AdminUsersPage;
 import pages.LoginPage;
 
 public class AdminUsersTest extends Base {
-	@Test
+	@Test(description="Verify add user functionality on admin user page")
 	public void verifyAddUserFunctionalityOnAdminUsersPage() {
 		String loginAdminUserName = ExcelUtility.getString(0,1,"LoginPage");
 		String loginAdminPassword = ExcelUtility.getString(1,1,"LoginPage");
 		String inputUserName = ExcelUtility.getString(0,1,"AdminUserPage");
 		String inputUserPassword = ExcelUtility.getString(1,1,"AdminUserPage");
 		String userType= ExcelUtility.getString(2,1,"AdminUserPage");
-		//String expectedAlertMessage="User Created Successfully";
 		String expectedAlertMessage = ExcelUtility.getString(4,1,"AdminUserPage");
 		
 		AdminUsersPage adminuserPage = new AdminUsersPage(driver);

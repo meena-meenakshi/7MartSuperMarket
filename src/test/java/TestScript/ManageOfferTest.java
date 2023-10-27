@@ -11,7 +11,7 @@ import pages.LoginPage;
 import pages.ManageOfferCodePage;
 
 public class ManageOfferTest extends Base{
-	@Test
+	@Test(description="Verify Add NewOffer Functionality On ManageOfferCodePage")
 	public void verifyAddNewOfferFunctionalityOnManageOfferCodePage() {
 		String loginAdminUserName = ExcelUtility.getString(0,1,"LoginPage");
 		String loginAdminPassword = ExcelUtility.getString(1,1,"LoginPage");

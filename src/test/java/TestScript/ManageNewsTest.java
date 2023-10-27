@@ -12,7 +12,7 @@ import pages.ManageNewsPage;
 
 public class ManageNewsTest extends Base{
 
-	@Test
+	@Test(description="Verify add new news functionality of ManagenewsPage")
 	public void verifyAddNewNewsButtonFunctionalityOnManageNewsPage() {
 		
 		String loginAdminUserName = ExcelUtility.getString(0,1,"LoginPage");

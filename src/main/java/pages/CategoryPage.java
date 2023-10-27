@@ -81,34 +81,35 @@ public WebDriver driver;
 		return this;
 	}
 
-	 public void clickOnSelectGroupButton() {
+	public CategoryPage clickOnSelectGroupButton() {
 		 PageUtility.moveToAElement(selectGroupButton, driver);
 		 selectGroupButton.click();
+		 return this;
 	 }
-	  public void clickOnTopRadioButton() {
-		 WaitUtility.waitForElementTobeClickable(driver, ShowOnTopMenuRadioButton);
-		  ShowOnTopMenuRadioButton.click();
+	 public CategoryPage clickOnTopRadioButton() {
+		  PageUtility.javascriptExcecuterForClick(driver, ShowOnTopMenuRadioButton);
+		  return this;
 		  
 	  }
-	  public void clickonLeftRadioButton() {
-		  WaitUtility.waitForElementTobeClickable(driver, ShowOnLeftMenuRadioButton);
-		  ShowOnLeftMenuRadioButton.click();
+	  public CategoryPage clickonLeftRadioButton() {
+		  PageUtility.javascriptExcecuterForClick(driver, ShowOnLeftMenuRadioButton);
+		 return this;
 	  }
-    public void uploadImageFile(String filepath )
-   {
+     public CategoryPage uploadImageFile(String filepath )
+     {
 	FileUploadUtility.fileUploadUsingSendKeys(chooseFileButton, filepath);
-   }
-   public void clickOnSaveButton() 
-  {
+	return this;
+     }
+     public CategoryPage clickOnSaveButton() 
+     {
 	PageUtility.javascriptExcecuterForClick(driver, saveFileButton);
-	//WaitUtility.waitForElementTobeClickable(driver, saveFileButton);
-	//saveFileButton.click();
-  }
-   public String issuccsessAlertDiplayed() {
+	return this;
+     }
+     public String issuccsessAlertDiplayed() {
 	   String alertText= categorySuccessAlertBox.getText();
 	   return alertText;
 	   
-   }
+     }
  
 	public void clickonActiveStatusButton() {
 		activeStatusButton.click();

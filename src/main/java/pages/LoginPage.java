@@ -21,7 +21,7 @@ public WebDriver driver;
 	@FindBy(xpath = "//input[@name='password']") WebElement passwordFiled;
 	@FindBy(xpath = "//button[text()='Sign In']")WebElement SignInButton;
 	@FindBy(xpath = "//div[@class='inner']//child::p[text()='Manage Pages']")WebElement ManagePageInHome;
-	
+	@FindBy(xpath = "//div[contains(@class,'alert-dismissible')]")WebElement AlertBox;
 	
 public LoginPage clickOnSignInButton() {
 	WaitUtility.waitForElementTobeClickable(driver, SignInButton);
@@ -46,5 +46,9 @@ public LoginPage enterPasswordOnPasswordField(String password) {
 		return ManagePageInHome.isDisplayed();
 	}
 	
-	
+	 public boolean isAlertDiplayed() {
+		 return AlertBox.isDisplayed();
+		   
+		   
+	   }
 }

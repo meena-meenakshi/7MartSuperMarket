@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-10-25T21:44:55 IST" name="Suite" finished-at="2023-10-25T21:46:48 IST" duration-ms="113376">
+  <suite started-at="2023-10-27T21:07:28 IST" name="Suite" finished-at="2023-10-27T21:08:30 IST" duration-ms="61632">
     <groups>
+      <group name="regression">
+        <method signature="LoginTest.verifyUserLoginwithInValidCredentials()[pri:0, instance:TestScript.LoginTest@5443d039]" name="verifyUserLoginwithInValidCredentials" class="TestScript.LoginTest"/>
+      </group> <!-- regression -->
     </groups>
-    <test started-at="2023-10-25T21:44:55 IST" name="chromeTest" finished-at="2023-10-25T21:45:50 IST" duration-ms="54558">
+    <test started-at="2023-10-27T21:07:28 IST" name="Test" finished-at="2023-10-27T21:08:30 IST" duration-ms="61632">
       <class name="TestScript.LoginTest">
-        <test-method is-config="true" signature="initilizeBrowser(java.lang.String)[pri:0, instance:TestScript.LoginTest@795509d9]" started-at="2023-10-25T21:44:55 IST" name="initilizeBrowser" finished-at="2023-10-25T21:45:46 IST" duration-ms="50852" status="PASS">
+        <test-method is-config="true" signature="initilizeBrowser(java.lang.String)[pri:0, instance:TestScript.LoginTest@5443d039]" started-at="2023-10-27T21:07:29 IST" name="initilizeBrowser" finished-at="2023-10-27T21:08:25 IST" duration-ms="55867" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -18,15 +21,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initilizeBrowser -->
-        <test-method signature="verifyUserLoginwithValidCredentials()[pri:0, instance:TestScript.LoginTest@795509d9]" started-at="2023-10-25T21:45:46 IST" name="verifyUserLoginwithValidCredentials" finished-at="2023-10-25T21:45:49 IST" duration-ms="2981" status="PASS">
+        <test-method signature="verifyUserLoginwithInValidCredentials()[pri:0, instance:TestScript.LoginTest@5443d039]" started-at="2023-10-27T21:08:25 IST" name="verifyUserLoginwithInValidCredentials" description="Verify whether user is able to login using invalid username and password" finished-at="2023-10-27T21:08:29 IST" duration-ms="4712" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyUserLoginwithValidCredentials -->
-        <test-method is-config="true" signature="driverClose(org.testng.ITestResult)[pri:0, instance:TestScript.LoginTest@795509d9]" started-at="2023-10-25T21:45:49 IST" name="driverClose" finished-at="2023-10-25T21:45:50 IST" duration-ms="580" status="PASS">
+        </test-method> <!-- verifyUserLoginwithInValidCredentials -->
+        <test-method is-config="true" signature="driverClose(org.testng.ITestResult)[pri:0, instance:TestScript.LoginTest@5443d039]" started-at="2023-10-27T21:08:29 IST" name="driverClose" finished-at="2023-10-27T21:08:30 IST" duration-ms="851" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=verifyUserLoginwithValidCredentials status=SUCCESS method=LoginTest.verifyUserLoginwithValidCredentials()[pri:0, instance:TestScript.LoginTest@795509d9] output={null}]]]>
+                <![CDATA[[TestResult name=verifyUserLoginwithInValidCredentials status=SUCCESS method=LoginTest.verifyUserLoginwithInValidCredentials()[pri:0, instance:TestScript.LoginTest@5443d039] output={null}]]]>
               </value>
             </param>
           </params>
@@ -34,36 +37,6 @@
           </reporter-output>
         </test-method> <!-- driverClose -->
       </class> <!-- TestScript.LoginTest -->
-    </test> <!-- chromeTest -->
-    <test started-at="2023-10-25T21:45:50 IST" name="edgeTest" finished-at="2023-10-25T21:46:48 IST" duration-ms="58784">
-      <class name="TestScript.LoginTest">
-        <test-method is-config="true" signature="initilizeBrowser(java.lang.String)[pri:0, instance:TestScript.LoginTest@c430e6c]" started-at="2023-10-25T21:45:50 IST" name="initilizeBrowser" finished-at="2023-10-25T21:46:45 IST" duration-ms="55470" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[edge]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initilizeBrowser -->
-        <test-method signature="verifyUserLoginwithValidCredentials()[pri:0, instance:TestScript.LoginTest@c430e6c]" started-at="2023-10-25T21:46:45 IST" name="verifyUserLoginwithValidCredentials" finished-at="2023-10-25T21:46:48 IST" duration-ms="2838" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyUserLoginwithValidCredentials -->
-        <test-method is-config="true" signature="driverClose(org.testng.ITestResult)[pri:0, instance:TestScript.LoginTest@c430e6c]" started-at="2023-10-25T21:46:48 IST" name="driverClose" finished-at="2023-10-25T21:46:48 IST" duration-ms="465" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=verifyUserLoginwithValidCredentials status=SUCCESS method=LoginTest.verifyUserLoginwithValidCredentials()[pri:0, instance:TestScript.LoginTest@c430e6c] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- driverClose -->
-      </class> <!-- TestScript.LoginTest -->
-    </test> <!-- edgeTest -->
+    </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>
